@@ -15,19 +15,19 @@ class ArraysTest extends TestCase
         $arr[] = 'c';
 
         // Which index will have 'c'?
-        //$this->assertEquals(?, array_key_last($arr));
+        $this->assertEquals(2, array_key_last($arr));
 
         $arr[10] = 'd';
         $arr[] = 'e';
 
         // Which index will have 'e'?
-        //$this->assertEquals(?, array_key_last($arr));
+        $this->assertEquals(11, array_key_last($arr));
 
         $arr['string'] = 'f';
         $arr[] = 'h';
 
         // Which index will have 'h'?
-        //$this->assertEquals(?, array_key_last($arr));
+        $this->assertEquals(12, array_key_last($arr));
     }
 
     /**
@@ -37,18 +37,27 @@ class ArraysTest extends TestCase
     {
         $arr = [];
         $arr[] = 'a';
+        // 0 => 'a'
         $arr["1"] = 'b';
+        // 1 => 'b'
         $arr["01"] = 'c';
+        // 01 => 'c'
         $arr[true] = 'd';
+        //1 => d
         $arr[0.5] = 'e';
+        // 0 => e
         $arr[false] = 'f';
+        // 0 => 'f'
         $arr[null] = 'g';
+        // '' => 'g'
+        var_dump($arr);
+
 
         // Which keys will have $arr
-        //$this->assertEquals(?, array_keys($arr));
+//        $this->assertEquals([], array_keys($arr));
 
         // Which values will have $arr
-        //$this->assertEquals(?, array_values($arr));
+//        $this->assertEquals([], array_values($arr));
     }
 
     /**
