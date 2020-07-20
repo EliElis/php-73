@@ -459,7 +459,7 @@
             "require": {
                 "ext-dom": "*",
                 "ext-xmlwriter": "*",
-                "php": "^7.3",
+                "php": "^7.2",
                 "phpunit/php-file-iterator": "^3.0",
                 "phpunit/php-text-template": "^2.0",
                 "phpunit/php-token-stream": "^4.0",
